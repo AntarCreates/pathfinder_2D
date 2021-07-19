@@ -1,5 +1,5 @@
 
-This is a simulation project where I used my custom robot, Pathfinder for mapping and autonomous navigation using Robot Operating System (ROS)
+This is a simulation project where I used my custom robot, Pathfinder for mapping and autonomous navigation using Robot Operating System (ROS). The first repository will deal with 2D mapping and second one (to be added) will look into 3D mapping and navigation.
 
 
 

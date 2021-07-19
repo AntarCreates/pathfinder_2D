@@ -1,9 +1,9 @@
-# pathfinder_description
+
 This is a simulation project where I used my custom robot, Pathfinder for mapping and autonomous navigation using Robot Operating System (ROS)
 
 
 
-Prequisites
+Prerequisites
 * Any of the ROS1 distros properly installed on the dedicated ubuntu OS. You'll need to have a working catkin workspace set up for further progression. To learn more: http://wiki.ros.org/Documentation
 
 #############################################--- Steps ---##########################################

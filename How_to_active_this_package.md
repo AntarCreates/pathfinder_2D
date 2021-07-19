@@ -11,6 +11,8 @@ Prerequisites
 step1: git clone the pathfinder_description package using the git clone command into the src folder of your catkin workspace.
 git clone https://github.com/AntarCreates/pathfinder.git
 
+## Note: The package in your src folder must be named as "pathfinder_description", otherwise, the commands given in the other instructive files will not work. ##
+
 step2: Update catkin enviornment using the following command in the catkin_ws directory
 source devel/setup.bash # you'll need to run this command everytime you open a new terminal or make updates to your workspace
 

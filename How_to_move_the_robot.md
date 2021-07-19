@@ -1,4 +1,4 @@
-## Hope you got the package set up without any error. Now let's move forward.
+## Hope you got the package set up without any error. Now let's move forward. 
 We will start by moving the robot.
 The robot, pathfinder has four wheels, a 2D Lidar set up on top and a Kinect camera set up at the front.
 The robot moves using the skid steer drive mechanism, which means the robot moves depending on the relative velocity of the four wheels.

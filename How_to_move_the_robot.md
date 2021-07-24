@@ -34,7 +34,7 @@ More control keys should be given in the same terminal with proper description.
 
 ### Step#5: Now while the teleop_twist_keyboard terminal is selected, move the robot around with designated keys. ###
 
-**Close all windows using ctrl+C**
+**Close all windows using ctrl+C.**
 
 ## Had a good time? Let me know! ##
 

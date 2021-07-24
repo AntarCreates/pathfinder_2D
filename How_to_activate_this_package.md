@@ -13,7 +13,7 @@
 
 `git clone https://github.com/AntarCreates/pathfinder.git `
 
-## _Note: The package in your src folder must be named as "pathfinder_description", otherwise, the commands given in the other instructive files will not work. You can change it if you want, but then you have to chanage the name in almost every single file. Make sure the folder is saved in your src folder as "pathfinder_description"_ * ##
+## _Note: The package in your src folder should be named as "pathfinder_description", otherwise, the commands given in the other instructive files will not work. You can change it if you want, but then you have to chanage the name in almost every single file. Make sure the folder is saved in your src folder as "pathfinder_description"_  ##
 
 ### step#2: Update catkin enviornment using the following command in the catkin_ws directory ###
 source devel/setup.bash # you'll need to run this command everytime you open a new terminal or make updates to your workspace

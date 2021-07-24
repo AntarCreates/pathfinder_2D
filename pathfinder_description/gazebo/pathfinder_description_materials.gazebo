@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<robot name="pathfinder" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/White" />
+<xacro:property name="sensor_color" value="Gazebo/Red" />
+<xacro:property name="wheel_color" value="Gazebo/Black" />
+
+
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+
+</gazebo>
+
+<gazebo reference="kinect_link_1">
+  <material>${sensor_color}</material>
+
+</gazebo>
+
+<gazebo reference="lidar_link_1">
+  <material>${sensor_color}</material>
+
+</gazebo>
+
+<gazebo reference="fr_wheel_1">
+  <material>${wheel_color}</material>
+
+</gazebo>
+
+<gazebo reference="rl_wheel_1">
+  <material>${wheel_color}</material>
+
+</gazebo>
+
+<gazebo reference="fl_wheel_1">
+  <material>${wheel_color}</material>
+
+</gazebo>
+
+<gazebo reference="rr_wheel_1">
+  <material>${wheel_color}</material>
+
+</gazebo>
+
+</robot>

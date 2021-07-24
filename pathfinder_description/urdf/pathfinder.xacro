@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<robot name="pathfinder" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find pathfinder_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find pathfinder_description)/urdf/pathfinder.trans" />
+
+
+<xacro:include filename="$(find pathfinder_description)/gazebo/pathfinder_description_materials.gazebo" />
+<xacro:include filename="$(find pathfinder_description)/gazebo/pathfinder_description_physics.gazebo" />
+<xacro:include filename="$(find pathfinder_description)/gazebo/pathfinder_description_plugins.gazebo" />
+
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.1752552426393709e-16 5.876276213196854e-17 0.0736276069033502"/>
+    <mass value="4.6586970268492465"/>
+    <inertia ixx="0.013672" ixy="0.0" ixz="-0.0" iyy="0.032955" iyz="-0.0" izz="0.033477"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="kinect_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.021463788268805295 0.0005758268808835205 -0.02206711015374241"/>
+    <mass value="1.650508832327415"/>
+    <inertia ixx="0.02781" ixy="0.000158" ixz="-0.000109" iyy="0.003289" iyz="2.2e-05" izz="0.029269"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.15 -0.0 -0.105"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/kinect_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.15 -0.0 -0.105"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/kinect_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.634107258209184e-18 4.634107258209184e-18 0.014866098910764486"/>
+    <mass value="0.7384321563465578"/>
+    <inertia ixx="0.000295" ixy="0.0" ixz="0.0" iyy="0.000295" iyz="-0.0" izz="0.000481"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.14"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.14"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="fr_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.215640900638972e-07 0.0007481673887969331 -1.8936020806936682e-10"/>
+    <mass value="0.6465952825483331"/>
+    <inertia ixx="0.000739" ixy="-0.0" ixz="0.0" iyy="0.001218" iyz="0.0" izz="0.000739"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.070134 0.095 -0.05"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/fr_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.070134 0.095 -0.05"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/fr_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rl_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.2156409002226383e-07 -0.0007481673887969331 -1.8936038848060832e-10"/>
+    <mass value="0.6465952825483331"/>
+    <inertia ixx="0.000739" ixy="-0.0" ixz="-0.0" iyy="0.001218" iyz="-0.0" izz="0.000739"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.070134 -0.095 -0.05"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/rl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.070134 -0.095 -0.05"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/rl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="fl_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.219730995429604e-07 -0.0007481653815892414 9.377970136559277e-10"/>
+    <mass value="0.6465951127279741"/>
+    <inertia ixx="0.000739" ixy="-0.0" ixz="-0.0" iyy="0.001218" iyz="-0.0" izz="0.000739"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.070134 -0.095 -0.05"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/fl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.070134 -0.095 -0.05"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/fl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rr_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.2168768794582636e-07 0.0007481653815892414 -8.339158530379365e-10"/>
+    <mass value="0.6465951127279755"/>
+    <inertia ixx="0.000739" ixy="-0.0" ixz="-0.0" iyy="0.001218" iyz="-0.0" izz="0.000739"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.070134 0.095 -0.05"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/rr_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.070134 0.095 -0.05"/>
+    <geometry>
+      <mesh filename="package://pathfinder_description/meshes/rr_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="kinect_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.15 0.0 0.105"/>
+  <parent link="base_link"/>
+  <child link="kinect_link_1"/>
+</joint>
+
+<joint name="lidar_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.14"/>
+  <parent link="base_link"/>
+  <child link="lidar_link_1"/>
+</joint>
+
+<joint name="fr_motor" type="continuous">
+  <origin rpy="0 0 0" xyz="0.070134 -0.095 0.05"/>
+  <parent link="base_link"/>
+  <child link="fr_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="rl_motor" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.070134 0.095 0.05"/>
+  <parent link="base_link"/>
+  <child link="rl_wheel_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="fl_motor" type="continuous">
+  <origin rpy="0 0 0" xyz="0.070134 0.095 0.05"/>
+  <parent link="base_link"/>
+  <child link="fl_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="rr_motor" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.070134 -0.095 0.05"/>
+  <parent link="base_link"/>
+  <child link="rr_wheel_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+
+</robot>
